@@ -1,0 +1,8 @@
+<h1><%= @list.name %></h1>
+
+<p><strong>Check all these movies </strong></p>
+  <% @list.movies.each do |movie| %>
+    <li><%= movie.title %> - <%= movie.overview %> - <%= movie.poster_url %> - <%= movie.rating %></li>
+  <% end %>
+
+<%= link_to "Back to lists", lists_path %>
